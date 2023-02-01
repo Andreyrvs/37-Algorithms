@@ -1,6 +1,6 @@
 def study_schedule(permanence_period, target_time):
     student_qty = 0
-    if target_time is None:
+    if not isinstance(target_time, int):
         return None
     for element in permanence_period:
         test = verify_tuple(element)
