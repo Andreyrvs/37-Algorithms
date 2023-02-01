@@ -1,18 +1,18 @@
 def study_schedule(permanence_period, target_time):
-    n = len(permanence_period)
+    counter = 0
+    for element in permanence_period:
+        if target_time is None or verify_tuple(element):
+            return None
+        if element[0] <= target_time <= element[1]:
+            counter += 1
 
-    for index in range(0, n):
-        for element in permanence_period:
-            if target_time == "" and verify_tuple(element) is False:
-                return None
-
-    return None
+    return counter
 
 
 def verify_tuple(item):
-    return all((
-        isinstance(item, tuple),
-        len(item) == 2,
-        isinstance(item[1], int),
-        isinstance(item[2], int),
-    ))
+    if (item is None
+            or len(item) == 2
+            or isinstance(item, tuple)
+            or isinstance(item[1], int)
+            or isinstance(item[2], int)):
+        return None
