@@ -10,4 +10,3 @@ def test_encrypt_message():
     assert encrypt_message("🔥🌊⛱🗿⛱🌊", 4) == "🌊⛱_🗿⛱🌊🔥"
     assert encrypt_message("🔥🌊⛱🗿⛱🌊", 0) == "🌊⛱🗿⛱🌊🔥"
     assert encrypt_message("🌊⛱🍷🗿🍷⛱", 9) == "⛱🍷🗿🍷⛱🌊"
-
