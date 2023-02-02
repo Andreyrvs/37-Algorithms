@@ -1,23 +1,17 @@
 def is_anagram(first_string, second_string):
-    if first_string == "" or second_string == "":
-        return (first_string, second_string, False)
-    if len(first_string) == 0 and len(second_string) == 0:
-        return (first_string, second_string, True)
 
-    list_1 = list(first_string.lower())
-    list_2 = list(second_string.lower())
-    bubleSort(list_1)
-    bubleSort(list_2)
+    list_1 = bubleSort(list(first_string.lower()))
+    list_2 = bubleSort(list(second_string.lower()))
 
-    #
-    #
-    #
-
-    result = bubleSort(list_1) == bubleSort(list_2)
     string1 = ''.join(list_1)
     string2 = ''.join(list_2)
 
-    return (string1, string2, result)
+    if string1 == "" or string2 == "":
+        return (string1, string2, False)
+    if string1 == string2:
+        return (string1, string2, True)
+
+    return (string1, string2, False)
 
 
 def bubleSort(array):
