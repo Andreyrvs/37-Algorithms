@@ -16,6 +16,7 @@ def is_anagram(first_string, second_string):
     result = bubleSort(list_1) == bubleSort(list_2)
     string1 = ''.join(list_1)
     string2 = ''.join(list_2)
+
     return (string1, string2, result)
 
 
