@@ -3,6 +3,12 @@ def is_anagram(first_string, second_string):
     list_1 = bubleSort(list(first_string.lower()))
     list_2 = bubleSort(list(second_string.lower()))
 
+    # /**
+    # * Consultei o repositório do Ronaldo Carlos [ronaferr]
+    # * para resolver essa parte.
+    # * Link do repositório:
+    # * https://github.com/tryber/sd-020-a-project-algorithms/pull/19
+    # */
     string1 = ''.join(list_1)
     string2 = ''.join(list_2)
 
